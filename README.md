@@ -1,5 +1,17 @@
 # Altcsv
 
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_shield)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/926ce49973984e9aac06/maintainability)](https://codeclimate.com/github/tushar2708/altcsv/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/926ce49973984e9aac06/test_coverage)](https://codeclimate.com/github/tushar2708/altcsv/test_coverage)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/tushar2708/altcsv/badge.svg)](https://snyk.io/test/github/tushar2708/altcsv) 
+
+
+
 An alternative to standard CSV implementation of Go (<https://github.com/golang/go/tree/master/src/encoding/csv>),
 and modified by Tushar Dwivedi (<https://github.com/tushar2708/altcsv>),
 to support some more delimiters, and a few non-standard(?) CSV formats.
