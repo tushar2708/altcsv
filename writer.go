@@ -47,53 +47,64 @@ func NewWriter(w io.Writer) *Writer {
 	}
 }
 
+// writeFieldWithQuote writes a single CSV field (cell) with quotes
+func (w *Writer) writeFieldWithQuote(field string) (err error) {
+
+	if _, err = w.w.WriteRune(w.Quote); err != nil {
+		return err
+	}
+
+	for _, r1 := range field {
+		switch r1 {
+		case w.Quote:
+			_, err = w.w.WriteString(string([]rune{w.Quote, w.Quote}))
+		case '\r':
+			if !w.UseCRLF {
+				err = w.w.WriteByte('\r')
+			}
+		case '\n':
+			if w.UseCRLF {
+				_, err = w.w.WriteString("\r\n")
+			} else {
+				err = w.w.WriteByte('\n')
+			}
+		default:
+			_, err = w.w.WriteRune(r1)
+		}
+		if err != nil {
+			return err
+		}
+	}
+
+	if _, err = w.w.WriteRune(w.Quote); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+
 // Writer writes a single CSV record to w along with any necessary quoting.
 // A record is a slice of strings with each string being one field.
 func (w *Writer) Write(record []string) (err error) {
 	for n, field := range record {
 		if n > 0 {
 			if _, err = w.w.WriteRune(w.Comma); err != nil {
-				return
+				return err
 			}
 		}
-
 		// If we don't have to have a quoted field then just
 		// write out the field and continue to the next field.
 		if !w.fieldNeedsQuotes(field) {
 			if _, err = w.w.WriteString(field); err != nil {
-				return
+				return err
 			}
 			continue
 		}
-		if _, err = w.w.WriteRune(w.Quote); err != nil {
-			return
+		if err = w.writeFieldWithQuote(field); err !=nil{
+			return err
 		}
 
-		for _, r1 := range field {
-			switch r1 {
-			case w.Quote:
-				_, err = w.w.WriteString(string([]rune{w.Quote, w.Quote}))
-			case '\r':
-				if !w.UseCRLF {
-					err = w.w.WriteByte('\r')
-				}
-			case '\n':
-				if w.UseCRLF {
-					_, err = w.w.WriteString("\r\n")
-				} else {
-					err = w.w.WriteByte('\n')
-				}
-			default:
-				_, err = w.w.WriteRune(r1)
-			}
-			if err != nil {
-				return
-			}
-		}
-
-		if _, err = w.w.WriteRune(w.Quote); err != nil {
-			return
-		}
 	}
 	if w.UseCRLF {
 		_, err = w.w.WriteString("\r\n")

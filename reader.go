@@ -287,15 +287,16 @@ func (r *Reader) parseField() (haveField bool, delim rune, err error) {
 	Quoted:
 		for {
 			r1, err = r.readRune()
-			if err != nil {
-				if err == io.EOF {
-					if r.LazyQuotes {
-						return true, 0, err
-					}
-					return false, 0, r.error(ErrQuote)
+			if err == io.EOF {
+				if r.LazyQuotes {
+					return true, 0, err
 				}
+				return false, 0, r.error(ErrQuote)
+			}
+			if err != nil {
 				return false, 0, err
 			}
+
 			switch r1 {
 			case r.Quote:
 				r1, err = r.readRune()
@@ -337,10 +338,11 @@ func (r *Reader) parseField() (haveField bool, delim rune, err error) {
 		}
 	}
 
+	if err == io.EOF {
+		return true, 0, err
+	}
+
 	if err != nil {
-		if err == io.EOF {
-			return true, 0, err
-		}
 		return false, 0, err
 	}
 
