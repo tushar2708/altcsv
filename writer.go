@@ -83,7 +83,6 @@ func (w *Writer) writeFieldWithQuote(field string) (err error) {
 	return nil
 }
 
-
 // Writer writes a single CSV record to w along with any necessary quoting.
 // A record is a slice of strings with each string being one field.
 func (w *Writer) Write(record []string) (err error) {
@@ -101,7 +100,7 @@ func (w *Writer) Write(record []string) (err error) {
 			}
 			continue
 		}
-		if err = w.writeFieldWithQuote(field); err !=nil{
+		if err = w.writeFieldWithQuote(field); err != nil {
 			return err
 		}
 
