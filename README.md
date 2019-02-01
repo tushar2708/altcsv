@@ -1,10 +1,7 @@
 # Altcsv
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_shield)
 
-
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_shield)
 
 [![HitCount](http://hits.dwyl.io/tushar2708/altcsv.svg)](http://hits.dwyl.io/tushar2708/altcsv)
 
