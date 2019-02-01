@@ -1,10 +1,8 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=b220802b4e7baa19c15b3231fedb3776065e7de080a5e9ea8e63c08da70813b8
+    - CC_TEST_REPORTER_ID=b79f0696855d7757e93e54918109cd4d587fcf9c85900a4be2741730edab23b1
 
 language: go
-
-#os: osx
 
 go:
   - 1.10.x
@@ -17,13 +15,13 @@ install:
 allow_failures:
   - go: master
 
-#before_script:
-#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-#  - chmod +x ./cc-test-reporter
-#  - ./cc-test-reporter before-build
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 script:
   - make test
 
-#after_script:
-#  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
