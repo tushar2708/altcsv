@@ -1,4 +1,6 @@
 # Altcsv
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_shield)
+
 
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
@@ -64,3 +66,7 @@ fileWtr.Close()
 * [x] Supporting `AllQuotes` flag.
 * [ ] Supporting reading or writing headers.
 * [ ] Reading & writing Row as a map[string]string, with header fields as keys.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_large)
