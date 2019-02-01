@@ -1,4 +1,6 @@
 # Altcsv
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_shield)
+
 
 An alternative to standard CSV implementation of Go (<https://github.com/golang/go/tree/master/src/encoding/csv>),
 and modified by Tushar Dwivedi (<https://github.com/tushar2708/altcsv>),
@@ -51,3 +53,7 @@ fileWtr.Close()
 * [x] Supporting `AllQuotes` flag.
 * [ ] Supporting reading or writing headers.
 * [ ] Reading & writing Row as a map[string]string, with header fields as keys.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_large)
