@@ -3,11 +3,8 @@
 
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
-[![HitCount](http://hits.dwyl.io/tushar2708/altcsv.svg)](http://hits.dwyl.io/tushar2708/altcsv)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/926ce49973984e9aac06/maintainability)](https://codeclimate.com/github/tushar2708/altcsv/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/926ce49973984e9aac06/test_coverage)](https://codeclimate.com/github/tushar2708/altcsv/test_coverage)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/tushar2708/altcsv/badge.svg)](https://snyk.io/test/github/tushar2708/altcsv)
 
