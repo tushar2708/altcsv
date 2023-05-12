@@ -66,4 +66,4 @@ fileWtr.Close()
 
 
 ## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftushar2708%2Faltcsv?ref=badge_small)
