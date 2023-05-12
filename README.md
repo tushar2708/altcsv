@@ -6,8 +6,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/926ce49973984e9aac06/maintainability)](https://codeclimate.com/github/tushar2708/altcsv/maintainability)
 
-[![Known Vulnerabilities](https://snyk.io/test/github/tushar2708/altcsv/badge.svg)](https://snyk.io/test/github/tushar2708/altcsv)
-
 
 An alternative to standard CSV implementation of Go (<https://github.com/golang/go/tree/master/src/encoding/csv>),
 and modified by Tushar Dwivedi (<https://github.com/tushar2708/altcsv>),
